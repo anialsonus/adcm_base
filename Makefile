@@ -1,4 +1,5 @@
 ADCMBASE_IMAGE ?= hub.arenadata.io/adcm/base
+ADCMBASE_NEW_TAG ?= $$(date '+%Y%m%d%H%M%S')
 
 
 # Default target
@@ -13,4 +14,4 @@ help: ## Shows that help
 ##################################################
 
 build: ## Build base image for ADCM's container. That is alpine with all packages.
-	docker build --pull=true --no-cache=true  -t $(ADCMBASE_IMAGE):$$(date '+%Y%m%d%H%M%S') -t $(ADCMBASE_IMAGE):latest .
+	docker build --pull=true --no-cache=true  -t $(ADCMBASE_IMAGE):$(ADCMBASE_NEW_TAG) -t $(ADCMBASE_IMAGE):latest ./base/.
