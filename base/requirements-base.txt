@@ -2,7 +2,7 @@
 git+https://github.com/arenadata/ansible.git@v2.8.8-p4
 # https://github.com/arenadata/ansible/archive/dde59b56fe6e33eb888bb425468e9d4c7ff0cb7e.zip
 coreapi
-django
+django<4.0
 django-cors-headers
 django-filter
 django-rest-swagger
