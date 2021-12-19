@@ -25,7 +25,7 @@ export venv_home="/adcm/venv"
 mkdir -p "${venv_home}"
 
 for v in $(find_venvs); do
-    virtualenv "${venv_home}/${v}"
+    virtualenv --system-site-packages "${venv_home}/${v}"
     source "${venv_home}/${v}/bin/activate"
     apply_reqs "venv-${v}"
 done
