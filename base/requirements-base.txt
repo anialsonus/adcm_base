@@ -14,6 +14,7 @@ social-auth-app-django
 git+git://github.com/arenadata/django-generate-secret-key.git
 # TODO jinja2 and markupsafe should be unpinned after https://arenadata.atlassian.net/browse/ADCM-2089 fixup
 Jinja2==2.11.3
+jsonschema
 MarkupSafe==1.1.1
 markdown
 mitogen
@@ -30,7 +31,6 @@ jmespath
 lxml
 pycrypto
 --extra-index-url https://ci.arenadata.io/artifactory/api/pypi/python-packages/simple
-adwp-events==0.1.7
 # YCC bundle libs (yandexcloud requirements)
 cryptography>=2.8
 grpcio>=1.38.1
