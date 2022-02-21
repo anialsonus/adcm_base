@@ -1,11 +1,16 @@
 #!/usr/bin/env sh
 set -eu
 
+cd /
+
+
 apk add --update --no-cache --virtual .pynacl_deps build-base python3-dev libffi-dev openssl-dev linux-headers libxslt-dev rust cargo
-apk add --update --no-cache libffi openssl libxslt libstdc++
+apk add --update --no-cache libffi openssl libxslt libstdc++ bash
 apk add --update --no-cache nginx sshpass runit openssh-keygen openssh-client git dcron logrotate curl rsync
-pip install --no-cache-dir -r /requirements-base.txt
-rm /requirements-base.txt
+
+/build_venv.sh
+rm -f /build_venv.sh
+
 apk del git
 apk del .pynacl_deps
 rm /etc/nginx/http.d/default.conf

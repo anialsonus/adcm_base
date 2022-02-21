@@ -176,6 +176,8 @@ done
 shift $(( OPTIND - 1 ))
 cd "$base"
 
+source /adcm/venv/default/bin/activate
+
 for req in requirements.txt requirements-test.txt tests/requirements.txt; do
     [ -f "${req}" ] && pip3 install --quiet -r "${req}"
 done
