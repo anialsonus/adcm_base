@@ -7,6 +7,7 @@ cd /
 apk add --update --no-cache --virtual .pynacl_deps build-base python3-dev libffi-dev openssl-dev linux-headers libxslt-dev rust cargo
 apk add --update --no-cache libffi openssl libxslt libstdc++ bash
 apk add --update --no-cache nginx sshpass runit openssh-keygen openssh-client git dcron logrotate curl rsync
+apk upgrade --no-cache
 
 /build_venv.sh
 rm -f /build_venv.sh
