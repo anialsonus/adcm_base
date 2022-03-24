@@ -2,6 +2,7 @@ coreapi
 django<4.0
 django-cors-headers
 django-filter
+django-guardian
 django-rest-swagger
 djangorestframework
 drf-flex-fields==0.9.1
@@ -12,6 +13,7 @@ git+git://github.com/arenadata/django-generate-secret-key.git
 virtualenv
 # TODO jinja2 and markupsafe should be unpinned after https://arenadata.atlassian.net/browse/ADCM-2089 fixup
 Jinja2==2.11.3
+jsonschema
 MarkupSafe==1.1.1
 markdown
 mitogen
@@ -22,5 +24,3 @@ uwsgi
 version_utils
 ruyaml
 yspec
---extra-index-url https://ci.arenadata.io/artifactory/api/pypi/python-packages/simple
-adwp-events==0.1.7
