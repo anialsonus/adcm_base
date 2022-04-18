@@ -1,2 +1,2 @@
-git+https://github.com/arenadata/ansible.git@v2.8.8-p4
+git+https://github.com/arenadata/ansible.git@v2.8.8-p5
 -r ./requirements-ansible.txt
